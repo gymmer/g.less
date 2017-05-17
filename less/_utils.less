@@ -1,0 +1,90 @@
+// 字体
+@base-font: Helvetica, Arial, sans-serif;
+.font-family() {
+    font-family: @base-font;
+}
+
+.font-family(ht) {
+    font-family: 'simhei', '黑体', @base-font;
+}
+
+.font-family(wryh) {
+    font-family: 'Microsoft Yahei', '微软雅黑', @base-font;
+}
+
+.font-family(fzltxh) {
+	font-family: '方正兰亭细黑', @base-font;
+}
+
+.font-family(awesome) {
+    font-family: FontAwesome;
+}
+
+// 清除浮动
+.clearfix() {
+    zoom: 1;
+    &:after {
+        font-size: 0;
+        display: block;
+        visibility: hidden;
+        clear: both;
+        height: 0;
+        content: ' ';
+    }
+}
+
+// 文字省略号
+.ellipsis(@width: 100%) {
+	width: @width;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.ellipsis-2() {
+	display: -webkit-box;
+	overflow: hidden;
+	white-space: normal !important;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+// 圆，输入为半径
+.circle(@r: 0) {
+    width: @r * 2;
+    height: @r * 2;
+    .border-radius(50%);
+}
+
+// 三角
+.triangle(top, @w: 5px, @color: #ccc){
+	border-style: solid dashed dashed dashed;
+	border-color: @color transparent transparent transparent;
+	border-width: @w;
+}
+
+.triangle(right, @w: 5px, @color: #ccc){
+	border-style: dashed solid dashed dashed;
+	border-color: transparent @color transparent transparent;
+	border-width: @w;
+}
+
+.triangle(bottom, @w: 5px, @color: #ccc){
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent @color transparent;
+	border-width: @w;
+}
+
+.triangle(left, @w: 5px, @color: #ccc){
+	border-style: dashed dashed dashed solid;
+	border-color: transparent transparent transparent @color;
+	border-width: @w;
+}
+
+.triangle(@_, @w: 5px, @color: #ccc){
+   width: 0;
+   height: 0;
+   overflow: hidden;
+}

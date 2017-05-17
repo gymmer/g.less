@@ -1,0 +1,153 @@
+// 透明度
+.opacity(@opacity: 0) {
+    @opacityPercentage: @opacity * 100;
+    opacity: @opacity;
+    -ms-filter: ~'"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacityPercentage})"'; 
+    filter: ~"alpha(opacity=@{opacityPercentage})";
+}
+
+// 渐变
+.transition(@para: none) {
+    transition: @para;
+    -o-transition: @para;
+    -ms-transition: @para;
+    -moz-transition: @para;
+    -webkit-transition: @para;
+}
+
+.transition-property(@property: none) {
+    transition-property: @property;
+    -o-transition-property: @property;
+    -ms-transition-property: @property;
+    -moz-transition-property: @property;
+    -webkit-transition-property: @property;
+}
+
+.transition-duration(@duration: 0) {
+    transition-duration: @duration;
+    -o-transition-duration: @duration;
+    -ms-transition-duration: @duration;
+    -moz-transition-duration: @duration;
+    -webkit-transition-duration: @duration;
+}
+
+.transition-delay(@delay: 0) {
+    transition-delay: @delay;
+    -o-transition-delay: @delay;
+    -ms-transition-delay: @delay;
+    -moz-transition-delay: @delay;
+    -webkit-transition-delay: @delay;
+}
+
+.transition-timing-function(@function: ease) {
+    transition-timing-function: @function;
+    -o-transition-timing-function: @function;
+    -ms-transition-timing-function: @function;
+    -moz-transition-timing-function: @function;
+    -webkit-transition-timing-function: @function;
+}
+
+// 2D转换
+.transform(@para: none) {
+    transform: @para;
+    -o-transform: @para;
+    -ms-transform: @para;
+    -moz-transform: @para;
+    -webkit-transform: @para;
+}
+
+// 圆角
+.border-radius(@para: 0) {
+    border-radius: @para;
+    -o-border-radius: @para;
+    -ms-border-radius: @para;
+    -moz-border-radius: @para;
+    -webkit-border-radius: @para;
+}
+
+.border-top-left-radius(@radius: 0) {
+	border-top-left-radius: @radius;
+    -o-border-top-left-radius: @radius;
+    -ms-border-top-left-radius: @radius;
+    -moz-border-top-left-radius: @radius;
+    -webkit-border-top-left-radius: @radius;
+}
+
+.border-left-top-radius(@radius: 0) {
+	.border-top-left-radius(@radius);
+}
+.border-radius(tl, @radius: 0) {
+    .border-top-left-radius(@radius);
+}
+
+.border-radius(lt, @radius: 0) {
+	.border-top-left-radius(@radius);
+}
+
+.border-top-right-radius(@radius: 0) {
+    border-top-right-radius: @radius;
+    -o-border-top-right-radius: @radius;
+    -ms-border-top-right-radius: @radius;
+    -moz-border-top-right-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+}
+
+.border-right-top-radius(@radius: 0) {
+	.border-top-right-radius(@radius);
+}
+
+.border-radius(tr, @radius: 0) {
+	.border-top-right-radius(@radius);
+}
+
+.border-radius(rt, @radius: 0) {
+	.border-top-right-radius(@radius);
+}
+
+.border-bottom-left-radius(@radius: 0) {
+	border-bottom-left-radius: @radius;
+    -o-border-bottom-left-radius: @radius;
+    -ms-border-bottom-left-radius: @radius;
+    -moz-border-bottom-left-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+}
+
+.border-left-bottom-radius(@radius: 0) {
+	.border-bottom-left-radius(@radius);
+}
+.border-radius(bl, @radius: 0) {
+    .border-bottom-left-radius(@radius);
+}
+
+.border-radius(lb, @radius: 0) {
+	.border-bottom-left-radius(@radius);
+}
+
+.border-bottom-right-radius(@radius: 0) {
+    border-bottom-right-radius: @radius;
+    -o-border-bottom-right-radius: @radius;
+    -ms-border-bottom-right-radius: @radius;
+    -moz-border-bottom-right-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+}
+
+.border-right-bottom-radius(@radius: 0) {
+	.border-bottom-right-radius(@radius);
+}
+
+.border-radius(br, @radius: 0) {
+	.border-bottom-right-radius(@radius);
+}
+
+.border-radius(rb, @radius: 0) {
+	.border-bottom-right-radius(@radius);
+}
+
+// 阴影
+.box-shadow(@para: none) {
+    box-shadow: @para;
+    -o-box-shadow: @para;
+    -ms-box-shadow: @para;
+    -moz-box-shadow: @para;
+    -webkit-box-shadow: @para;
+}
